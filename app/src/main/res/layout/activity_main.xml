@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.caculatortraining.MainActivity">
+
+  <EditText
+      android:id="@+id/edtNum1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Nhập vào số thứ nhất"
+      android:padding="16dp" />
+
+  <EditText
+      android:id="@+id/edtNum2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/edtNum1"
+      android:layout_marginTop="20dp"
+      android:hint="Nhập vào số thứ hai"
+      android:padding="16dp" />
+
+  <TextView
+      android:id="@+id/tvMoiChon"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/edtNum2"
+      android:gravity="center"
+      android:padding="16dp"
+      android:text="Mời chọn phép tính"
+      android:textSize="18sp" />
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_below="@+id/tvMoiChon"
+      android:background="@android:color/darker_gray" />
+
+  <RadioGroup
+      android:id="@+id/rgPhepTinh"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvMoiChon"
+      android:orientation="vertical"
+      android:padding="16dp">
+
+    <RadioButton
+        android:id="@+id/rbCong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cộng" />
+
+    <RadioButton
+        android:id="@+id/rbTru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trừ" />
+
+    <RadioButton
+        android:id="@+id/rbNhan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nhân" />
+
+    <RadioButton
+        android:id="@+id/rbChia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chia" />
+
+  </RadioGroup>
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_below="@+id/rgPhepTinh"
+      android:background="@android:color/darker_gray" />
+
+  <Button
+
+      android:id="@+id/btTinh"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/rgPhepTinh"
+      android:layout_marginLeft="16dp"
+      android:layout_marginTop="10dp"
+      android:text="Tính" />
+
+  <TextView
+      android:id="@+id/tvKetQua"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBaseline="@+id/btTinh"
+      android:layout_alignBottom="@+id/btTinh"
+      android:layout_centerHorizontal="true"
+      android:text="0000"
+      android:textColor="#000"
+      android:textSize="20sp" />
+
+
+</RelativeLayout>
